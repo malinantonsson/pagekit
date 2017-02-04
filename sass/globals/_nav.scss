@@ -1,0 +1,21 @@
+.nav {
+	position: absolute;
+	right: 0;
+	bottom: map-get($settings, header-position);
+
+	@include mq(from, large) {
+       @include span-columns(10);
+    }
+}
+
+.nav_item {
+    padding: 0 10px 0 0;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.nav_item.active  {
+    color: #999;
+    font-weight: bold;
+}

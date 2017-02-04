@@ -1,0 +1,27 @@
+.header {
+	border-bottom: 1px solid #CCC;
+    position: relative;
+    margin: 0 2em 25px 2em;
+    padding: 40px 0px 40px;
+    z-index: map-get($z-index, header);
+
+    color: #fff;
+
+    @include mq(from, large) {
+	    margin: 0 40px 25px 40px;
+    }
+}
+
+.header__logo {
+	text-transform: uppercase;
+	bottom: map-get($settings, header-position);
+	position: absolute;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    @include mq(from, large) {
+       @include span-columns(2);
+    }
+}

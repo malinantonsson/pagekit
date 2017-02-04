@@ -1,0 +1,14 @@
+.textblock {}
+
+.textblock__headline {
+	font-size: 12px;
+    padding: 0 0 5px 0;
+    color: #000;
+    font-weight: bold;
+
+    @include mq(from, large) {
+    	padding: 0 0 10px 0;
+    }
+}
+
+.textblock__copy {}

@@ -1,0 +1,6 @@
+$video-width: 274;
+$video-height: 154;
+
+.video-wrapper {
+	@include fluid-image-container($video-width, $video-height);
+}

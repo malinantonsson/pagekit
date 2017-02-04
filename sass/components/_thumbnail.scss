@@ -1,0 +1,10 @@
+.thumbnail {}
+
+.thumbnail__wrapper {
+	max-width: 80px;
+	display: inline-block;
+
+	&:hover {
+		cursor: pointer;
+	}
+}

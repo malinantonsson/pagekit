@@ -1,0 +1,50 @@
+$image-width: 274;
+$image-height: 154;
+
+
+.work-listing {}
+
+.work-listing__item {
+	&:hover {
+		text-decoration: none;
+	}
+	
+	margin-bottom: 25px;
+	@include span-columns(6);
+
+	@include mq(upto, medium) {
+	   &:nth-child(2n) {
+	   	@include omega();
+	   }
+	}
+
+	@include mq(between, medium, large) {
+       @include span-columns(4);
+
+       &:nth-child(3n) {
+       	@include omega();
+       }
+    }
+
+	@include mq(from, large) {
+       @include span-columns(3);
+
+       &:nth-child(4n) {
+       	@include omega();
+       }
+    }
+}
+
+.work-listing__title {
+	display: block;
+	font-weight: bold;
+}
+
+.work-listing__copy {
+	font-size: 12px;
+}
+
+.work-listing .image-wrapper {
+	@include fluid-image-container($image-width, $image-height);
+}
+.work-listing__image {}

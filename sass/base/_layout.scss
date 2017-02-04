@@ -1,0 +1,62 @@
+.homepage .wrapper {
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+	padding: 0px 2em 40px;
+    position: relative;
+    overflow: auto;
+
+    @include mq(from, large) {
+        padding: 0px 40px 40px;
+	    min-width: 967px;
+	    z-index: 100;
+	}
+}
+
+img {
+    max-width: 100%;
+}
+
+.component {
+    margin-top: 1.2em;
+    overflow: auto; 
+}
+
+/* contact page layout */
+.contact-info {
+    @include mq(from, large) {
+       @include span-columns(2);
+    }
+}
+
+.contact-image {
+    @include mq(from, large) {
+        @include span-columns(9);
+    }
+}
+
+/* about page layout */
+.about-us .grid-wrapper {
+    .component.textblock {
+        @include mq(from, large) {
+            @include span-columns(2);
+        }
+    }
+
+    .component.hero-image {
+        @include mq(from, large) {
+            @include span-columns(4);
+        }
+    }
+}
+
+.work-item .container {
+    max-width: 860px;
+    min-width: auto;
+}
+

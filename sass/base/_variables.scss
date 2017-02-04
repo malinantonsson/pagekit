@@ -1,0 +1,91 @@
+$grid-columns: 12;
+
+$breakpoints: (
+	small: 480px,
+	medium: 769px, 
+	large: 967px
+);
+
+
+$z-index: (
+	header: 10
+);
+
+$image-sizes: (
+	homepage-featured: (
+		width: 1265,
+		height: 712
+	)
+);
+
+$settings: (
+	header-position: 3px
+);
+
+/*
+List of font sizes / attributes
+The null key == default styles (no media query)
+Values can be one value (size) as px or a list of type attributes e.g.:
+(size, color, weight, line-height, letter-spacing, text-transform)
+null values in the list will be ommitted
+ */
+$type-formatting: (
+	h1: (
+		null: (34px, null, 400, null, .02em, null),
+		small: 36px,
+		medium: 42px,
+		large: 60px,
+		xlarge: 64px,
+	),
+	h2: (
+		null: (30px, null, 400, null, .02em, null),
+		small: 30px,
+		medium: 30px,
+		large: 30px,
+		xlarge: 30px,
+	),
+	h3: (
+		null: (22px, null, 400, null, .02em, null),
+		small: 22px,
+		medium: 22px,
+		large: 22px,
+		xlarge: 22px,
+	),
+	p-lead: (
+		null: (20px, null, 400, 1.3em, .02em, null),
+		small: 20px,
+		medium: 20px, null, 400, null, .02em, null,
+		large: 20px,
+		xlarge: 20px,
+	),
+	p-quote: (
+		null: (24px, null, 400, 1.3em, .02em, null),
+		small: 24px,
+		medium: 24px, null, 400, null, .02em, null,
+		large: 26px,
+		xlarge: 26px,
+	),
+	p: (
+		null: (12px, null, 400, 1.5em, .02em, null),
+		small: 12px,
+		medium: 12px,
+		large: 12px,
+		xlarge: 12px,
+	),
+	nav: (
+		null: (12px, #000000, 400, 1.9em, null, null),
+		small: 12px,
+		medium: 12px,
+		large: 12px,
+		xlarge: 12px,
+	)
+);
+
+/*  Assign to vars - then use in type placeholders _placeholders.scss  */
+$type-formatting-h1: map-get($type-formatting, 'h1');
+$type-formatting-h2: map-get($type-formatting, 'h2');
+$type-formatting-h3: map-get($type-formatting, 'h3');
+$type-formatting-p-lead: map-get($type-formatting, 'p-lead');
+$type-formatting-p-quote: map-get($type-formatting, 'p-quote');
+$type-formatting-p: map-get($type-formatting, 'p');
+$type-formatting-nav: map-get($type-formatting, 'nav');

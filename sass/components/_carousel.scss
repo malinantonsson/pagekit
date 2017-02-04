@@ -1,0 +1,46 @@
+.carousel {
+	max-height: 100%;
+	max-height: 100vh;
+	overflow: hidden;
+}
+
+.Wallop-item {
+	//@include mq(upto, medium) {
+		min-height: 100%;
+		min-height: 100vh;
+		max-height: 100%;
+    	max-height: 100vh;
+	//}
+
+	/* @include mq(from, medium) {
+		max-height: 100%;
+		max-height: 100vh;
+		overflow: hidden;
+	} */
+}
+
+
+.carousel_image {
+	vertical-align: bottom;
+
+	//@include mq(upto, medium) {
+		@include center-crop-absolute();
+		position: absolute;
+		min-height: 100%;
+		min-height: 100vh;
+	//}
+
+	@include mq(from, medium) {
+		width: 100%;
+		min-height: 100vh;
+	}
+}
+
+.carousel__title {
+	position: absolute;
+	bottom: 3em;
+	left: 3em;
+	color: #fff;
+
+	font-size: 14px;
+}

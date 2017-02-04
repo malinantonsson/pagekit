@@ -1,0 +1,35 @@
+.work-info {}
+
+.work-info__intro {
+  @include mq(from, medium) {
+     @include span-columns(4);
+  }
+
+	@include mq(from, large) {
+     @include span-columns(3);
+  }
+}
+
+.work-info__copy {
+  @include mq(from, medium) {
+    @include span-columns(8);
+    font-size: 12px;
+    margin-top: 1em;
+
+    max-height: 190px;
+
+    column-count: 2;
+    column-gap: 20px;
+
+    p {
+        margin-top: 0;
+    }
+  }
+
+	@include mq(from, large) {
+		max-height: 144px;
+    @include span-columns(9);
+    column-count: 3;
+    column-gap: 20px;
+  }
+}
