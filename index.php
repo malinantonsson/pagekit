@@ -21,10 +21,13 @@ return [
 
     ],
 
+    /**
+     * Page specific items
+     */
     'node' => [
 
         'top_style' => 'uk-block-muted',
-        'title_hide' => false
+        'page_class' => ''
 
     ],
 

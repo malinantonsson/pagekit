@@ -28,7 +28,7 @@
         </header>
 
         <main id="container" class="container wrapper" role="main">
-            <div class="about-us">
+            <div class="<?= $params['page_class'] ?>">
                 <div class="grid-wrapper">
 
                     <!-- Render left sidebar -->

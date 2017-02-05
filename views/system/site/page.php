@@ -1,4 +1,4 @@
-<section class="component hero-image"> 
+<section class="component main-content"> 
 
     <?= $page->content ?>
 
