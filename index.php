@@ -23,7 +23,8 @@ return [
 
     'node' => [
 
-        'top_style' => 'uk-block-muted'
+        'top_style' => 'uk-block-muted',
+        'title_hide' => false
 
     ],
 
@@ -57,6 +58,7 @@ return [
 
     'widget' => [
 
+        'title_hide' => false,
         'panel' => ''
 
     ],
