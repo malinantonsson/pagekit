@@ -17,7 +17,6 @@
                 <?php else : ?>
                     <?= $params['title'] ?>
                 <?php endif ?>
-            Alphabet
             </a>
             
             <!-- Render menu position -->
@@ -28,27 +27,36 @@
             </nav>
         </header>
 
-        <?php if ($view->position()->exists('top')) : ?>
-        <div id="top" class="tm-top <?= $params['top_style'] ?>">
-            <div class="uk-container uk-container-center">
+        <main id="container" class="container wrapper" role="main">
+            <div class="about-us">
+                <div class="grid-wrapper">
 
-                <section class="uk-grid uk-grid-match" data-uk-grid-margin>
-                    <?= $view->position('top', 'position-grid.php') ?>
-                </section>
+                    <?php if ($view->position()->exists('top')) : ?>
+                    <div id="top" class="tm-top <?= $params['top_style'] ?>">
+                        <div class="uk-container uk-container-center">
 
+                            <section class="uk-grid uk-grid-match" data-uk-grid-margin>
+                                <?= $view->position('top', 'position-grid.php') ?>
+                            </section>
+
+                        </div>
+                    </div>
+                    <?php endif ?>
+
+                     <!-- Render widget position -->
+                    <?php if ($view->position()->exists('sidebar')) : ?>
+                        <?= $view->position('sidebar', 'sidebar.php') ?>
+                    <?php endif; ?>
+
+                    <!-- Render content -->
+                    <?= $view->render('content') ?>
+                </div>
             </div>
-        </div>
-        <?php endif ?>
+        </main>
 
-        
+       
 
-        <!-- Render widget position -->
-        <?php if ($view->position()->exists('sidebar')) : ?>
-            <?= $view->position('sidebar') ?>
-        <?php endif; ?>
-
-        <!-- Render content -->
-        <?= $view->render('content') ?>
+       
 
         <!-- Insert code before the closing body tag  -->
         <?= $view->render('footer') ?>
