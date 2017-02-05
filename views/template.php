@@ -31,26 +31,21 @@
             <div class="about-us">
                 <div class="grid-wrapper">
 
-                    <?php if ($view->position()->exists('top')) : ?>
-                    <div id="top" class="tm-top <?= $params['top_style'] ?>">
-                        <div class="uk-container uk-container-center">
-
-                            <section class="uk-grid uk-grid-match" data-uk-grid-margin>
-                                <?= $view->position('top', 'position-grid.php') ?>
-                            </section>
-
-                        </div>
-                    </div>
-                    <?php endif ?>
-
-                     <!-- Render widget position -->
+                    <!-- Render left sidebar -->
                     <?php if ($view->position()->exists('sidebar')) : ?>
                         <?= $view->position('sidebar', 'sidebar.php') ?>
                     <?php endif; ?>
 
                     <!-- Render content -->
                     <?= $view->render('content') ?>
+
+                    <!-- Render right sidebar -->
+                    <?php if ($view->position()->exists('sidebar-right')) : ?>
+                        <?= $view->position('sidebar-right', 'sidebar-right.php') ?>
+                    <?php endif; ?>
                 </div>
+
+
             </div>
         </main>
 

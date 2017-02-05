@@ -9,6 +9,10 @@
     @include mq(from, large) {
     	padding: 0 0 10px 0;
     }
+
+    &.textblock__headline--hidden {
+    	display: none;
+    }
 }
 
 .textblock__copy {}

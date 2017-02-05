@@ -35,8 +35,8 @@ return [
      */
     'positions' => [
 
-        'sidebar' => 'Sidebar',
-        'top' => 'Top'
+        'sidebar' => 'Sidebar Left',
+        'sidebar-right' => 'Sidebar Right'
 
     ],
 
@@ -58,8 +58,9 @@ return [
 
     'widget' => [
 
-        'title_hide' => false,
+        'hide_title' => false,
         'panel' => ''
+
 
     ],
 

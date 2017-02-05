@@ -15,6 +15,21 @@
             </div>
         </div>
 
+
+        <!-- Hide widget title -->
+        <div class="uk-form-row">
+            <label for="form-theme-hide_title" class="uk-form-label">
+                {{ 'Hide widget title?' | trans }}
+
+            </label>
+
+            <div class="uk-form-controls">
+                <input id="form-theme-hide_title" v-model="widget.theme.hide_title" type="checkbox"> {{ 'Yes' | trans }}
+            </div>
+
+        </div>
+            
+
     </div>
 
 </template>
