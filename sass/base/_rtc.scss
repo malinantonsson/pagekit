@@ -10,3 +10,9 @@
 		list-style-position: inside;
 	}
 }
+
+.textblock__headline--hidden + .rtc {
+	> p:first-child {
+		margin-top: 0;
+	}
+}

@@ -3,9 +3,7 @@
         <h2 class="textblock__headline"><?= $widget->title ?></h2>
 
         <div class="rtc">
-			<p class="textblock__copy">
-	        	<?= $widget->get('result') ?>
-	        </p>
+	        <?= $widget->get('result') ?>
 	    </div>
 	</section>
 <?php endforeach ?>
