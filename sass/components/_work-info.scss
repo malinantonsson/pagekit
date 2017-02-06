@@ -12,11 +12,8 @@
 
 .work-info__copy {
   @include mq(from, medium) {
-    @include span-columns(8);
     font-size: 12px;
     margin-top: 1em;
-
-    max-height: 190px;
 
     column-count: 2;
     column-gap: 20px;
@@ -27,9 +24,7 @@
   }
 
 	@include mq(from, large) {
-		max-height: 144px;
-    @include span-columns(9);
-    column-count: 3;
+    column-count: 4;
     column-gap: 20px;
   }
 }

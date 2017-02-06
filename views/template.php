@@ -6,10 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?= $view->render('head') ?>
         <?php $view->style('normalize', 'theme:css/vendor/normalize.css') ?>
+        <?php $view->style('wallop', 'theme:css/vendor/wallop.css') ?>
+        <?php $view->style('wallop--fade', 'theme:css/vendor/wallop--fade.css') ?>
         <?php $view->style('theme', 'theme:css/theme.css') ?>
-        <?php $view->script('theme', 'theme:js/theme.js') ?>
+
+
+        <?php $view->script('wallop', 'theme:js/vendor/Wallop.min.js') ?>
+        <?php $view->script('theme', 'theme:js/theme.js', 'wallop') ?>
+
     </head>
-    <body>
+    <body class="<?= $params['page_class'] ?>--body">
 
         <header class="header" role="banner">
             <a href="<?= $view->url()->get() ?>" class="header__logo">
